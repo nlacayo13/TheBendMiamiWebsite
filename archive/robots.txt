@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# NOTE: robots.txt is only honored at a DOMAIN ROOT. It works once The Bend has
+# its own domain (site at root). At prod, update the Sitemap URL below.
+Sitemap: https://www.goaberrant.com/thebendmiami/sitemap.xml

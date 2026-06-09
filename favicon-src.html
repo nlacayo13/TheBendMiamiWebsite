@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>favicon source</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap" rel="stylesheet">
+<style>
+  html,body{ margin:0; height:100%; background:transparent; }
+  .ico{
+    width:100vw; height:100vh; position:relative; overflow:hidden;
+    border-radius:22%;
+    background:radial-gradient(120% 120% at 30% 20%, #2ee6d6 0%, #1bd6c7 45%, #0fb6a8 100%);
+    display:grid; place-items:center;
+  }
+  /* squared variant for apple-touch-icon (?sq=1) */
+  body.sq .ico{ border-radius:0; }
+  /* faint sunburst for texture */
+  .ico::before{
+    content:""; position:absolute; inset:-40%; opacity:.16;
+    background:repeating-conic-gradient(from 0deg, #0c5b54 0 9deg, transparent 9deg 22deg);
+  }
+  .ico b{
+    position:relative; font-family:'Bagel Fat One', system-ui; line-height:1;
+    font-size:80vmin; color:#fff3e2;
+    margin-top:-.06em;
+    text-shadow:
+      .035em .045em 0 #ffc15a,
+      .065em .085em 0 #f0531c,
+      .085em .12em 0 #cf3c0a;
+  }
+</style>
+</head>
+<body>
+  <div class="ico"><b>B</b></div>
+  <script>
+    if (location.search.indexOf('sq=1') >= 0) document.body.classList.add('sq');
+  </script>
+</body>
+</html>
